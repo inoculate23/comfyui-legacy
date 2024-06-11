@@ -1,0 +1,49 @@
+[project]
+# CHANGE: The project name
+name = "ComfyUI_Nodes"
+version = "0.1.1"
+# description = '...'
+readme = "README.md"
+# requires-python = ">=3.8"
+# license = "MIT"
+keywords = ["comfyui"]
+dynamic = ["dependencies"]
+
+[project.urls]
+# CHANGE: Homepage, mostly the GitHub repository
+Homepage = "https://haaawkeneuraltech.com"
+comfyui-legacy = "https://github.com/inoculate23/comfyui-legacy"
+
+[build-system]
+requires = ["hatchling", "hatch-requirements-txt"]
+build-backend = "hatchling.build"
+
+[tool.hatch.metadata.hooks.requirements_txt]
+# CHANGE: Remove this section if there is no requirements.txt
+files = ["requirements.txt"]
+
+[tool.hatch.build.targets.sdist]
+packages = ["."]
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]
+exclude = [
+  "*.md",
+  "/images",
+  "/docs",
+  "/examples",
+  "/workflow_examples",
+  "/tests",
+]
+
+[tool.hatch.build.targets.sdist.sources]
+# CHANGE: Package name. Must be an valid Python id (no dashes)
+"." = "HaawkeNeural_CustomNodes"
+
+[tool.hatch.build.targets.wheel.sources]
+# CHANGE: Same as above
+"." = "HaawkeNeural_CustomNodes"
+
+[project.entry-points."HaawkeNeural_CustomNodes"]
+# CHANGE: Same as above
+"HaawkeNeural_CustomNodes" = "HaawkeNeural_CustomNodes"
