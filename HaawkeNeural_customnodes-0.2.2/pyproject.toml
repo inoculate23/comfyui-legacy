@@ -1,7 +1,7 @@
 [project]
 # CHANGE: The project name
 name = "ComfyUI_Nodes"
-version = "0.1.1"
+version = "0.2.2"
 # description = '...'
 readme = "README.md"
 # requires-python = ">=3.8"
