@@ -1,4 +1,4 @@
-# ComfyUI_Ib_CustomNodes
+# HaawkeNeural_CustomNodes
 ## Load Image From Path
 ```python
 def LoadImageFromPath(
